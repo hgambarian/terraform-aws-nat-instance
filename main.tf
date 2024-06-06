@@ -32,8 +32,7 @@ resource "aws_network_interface" "this" {
 }
 
 resource "aws_route" "this" {
-  for_each               = var.private_route_table_ids
-  route_table_id         = each.value[0]
+  route_table_id         = var.private_route_table_ids
   destination_cidr_block = "0.0.0.0/0"
   network_interface_id   = aws_network_interface.this.id
 }
