@@ -26,8 +26,7 @@ variable "private_subnets_cidr_blocks" {
 
 variable "private_route_table_ids" {
   description = "List of ID of the route tables for the private subnets. You can set this to assign the each default route to the NAT instance"
-  type        = list(string)
-  default     = []
+  type        = map(list(string))
 }
 
 variable "image_id" {
