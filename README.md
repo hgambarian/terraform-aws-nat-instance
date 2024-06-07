@@ -4,6 +4,7 @@ This is a Terraform module which provisions a NAT instance.
 
 Features:
 
+
 - Providing NAT for private subnet(s)
 - Auto healing using an auto scaling group
 - Saving cost using a spot instance (from $1/month)
